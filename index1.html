@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		
+			<script src="js/jquery-1.12.4.js"></script>
+			<script src='js/bootstrap.min.js'></script>
+			
+			<link type="text/css" rel="stylesheet" href="css/style1.css" />
+			<!--jQuery-->
+			<script type="text/javascript" src="js/jquery.js"></script>
+			<!--jQuery动画暂停插件-->
+			<script type="text/javascript" src="js/jquery.pause.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index1.css"/>
+		<script type="text/javascript">
+			$(function () {
+    var scrtime;
+
+    var $ul = $("#con ul");
+    var liFirstHeight = $ul.find("li:first").height();//第一个li的高度
+    $ul.css({ top: "-" + liFirstHeight - 20 + "px" });//利用css的top属性将第一个li隐藏在列表上方	 因li的上下padding:10px所以要-20
+
+    $("#con").hover(function () {
+        $ul.pause();//暂停动画
+        clearInterval(scrtime);
+    }, function () {
+        $ul.resume();//恢复播放动画	
+        scrtime = setInterval(function scrolllist() {
+            //动画形式展现第一个li
+            $ul.animate({ top: 0 + "px" }, 1500, function () {
+                //动画完成时
+                $ul.find("li:last").prependTo($ul);//将ul的最后一个剪切li插入为ul的第一个li
+                liFirstHeight = $ul.find("li:first").height();//刚插入的li的高度
+                $ul.css({ top: "-" + liFirstHeight - 20 + "px" });//利用css的top属性将刚插入的li隐藏在列表上方  因li的上下padding:10px所以要-20					
+            });
+        }, 3300);
+
+    }).trigger("mouseleave");//通过trigger("mouseleave")函数来触发hover事件的第2个函数
+
+});
+</script>
+	</head>
+	<body>
+		<div class="cla1">
+			<div class="claa"><a href="index1.html" target="_blank">起点中文网</a>
+			<ul>
+				<li><a href="靳书豪_项目/index.html" target="_blank">起点女生网</a></li>
+				<li><a href="#">创世中文网</a></li>
+				<li><a href="#">云起书院</a></li>
+			</ul>
+			</div>
+			
+			<p class="clab"><a href="ranking.html" target="_blank">玄幻</a></p>
+			<p class="clab"><a href="ranking.html" target="_blank">都市</a></p>
+			<p class="clab"><a href="ranking.html" target="_blank">仙侠</a></p>
+			<p class="clab"><a href="ranking.html" target="_blank">科幻</a></p>
+			<p class="clab"><a href="ranking.html" target="_blank">游戏</a></p>
+			<p class="clab"><a href="ranking.html" target="_blank">历史</a></p>
+			<p class="clab"><a href="ranking.html" target="_blank">排行</a></p>
+			<p class="clac"><a href="zl/222222.html">更多【&nbsp;】</a></p>
+			<p class="clad"><input type="text" placeholder="东华帝君" />&nbsp;
+			<input type="image" src="img/toubu_sousuo.png" />
+			</p>
+			<p class="clae"><a href="孙壮/index3.html" target="_blank">书友20170815125930..</a></p>
+			<p class="claf"><a href="孙壮/index3.html" target="_blank">【图片】我的书架</a></p>
+		</div>
+		
+		
+		
+		<!--id1-->
+		
+		<div id="id1">
+		</div>
+		
+		<!--id2-->
+		<div id="id2">
+			<img src="img/id2_qidian.jpg" />
+			
+			
+			
+			
+			
+			
+			<!--图片-->
+			<div class="cla1">
+				
+				<img src="img/id2_img.png" width="100%" height="100%" />
+				
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<div class="cla2">
+				<img src="img/id2_shu.png" /><a href="孙壮/index3.html" target="_blank">我的书架</a>
+			</div>
+			
+		</div>
+		
+		
+		<!--id3-->
+		<div id="id3">
+			<div class="cla1"><img src="img/id3_img1.png" /><a href="#">作品分类</a></div>
+		
+			<ul>
+				<li><a href="ranking.html" target="_blank">全部作品</a></li>
+				<li><a href="ranking.html" target="_blank">排行</a></li>
+				<li><a href="ranking.html" target="_blank">完本</a></li>
+				<li><a href="ranking.html" target="_blank">追书</a></li>
+				<li><a href="mianfei.html" target="_blank">免费</a></li>
+				<li><a href="ranking.html" target="_blank">作家专区</a></li>
+			</ul>
+			<p><img src="img/id3_img3.png"/><a href="#">页游</a></p>
+			<p><img src="img/id3_img2.png"/><a href="#">手游</a></p>
+		
+		</div>
+		
+		
+		
+		<!--id4-->
+		<div id="id4">
+			
+			<div id="cla1">
+				<ul>
+					<li><p><img src="img/id4_img1_1.png" /><a href="ranking.html" target="_blank">玄幻</a><br/><span>587716</span></p><p><img src="img/id4_img1_2.png" /><a href="#">奇幻</a><br/><span>125497</span></p></li>
+					<li><p><img src="img/id4_img1_3.png" /><a href="ranking.html" target="_blank">武侠</a><br/><span>587716</span></p><p><img src="img/id4_img1_4.png" /><a href="#">仙侠</a><br/><span>587716</span></p></li>
+					<li><p><img src="img/id4_img1_5.png" /><a href="ranking.html" target="_blank">都市</a><br/><span>587716</span></p><p><img src="img/id4_img1_6.png" /><a href="#">现实</a><br/><span>587716</span></p></li>
+					<li><p><img src="img/id4_img1_7.png" /><a href="ranking.html" target="_blank">军事</a><br/><span>587716</span></p><p><img src="img/id4_img1_8.png" /><a href="#">历史</a><br/><span>587716</span></p></li>
+					<li><p><img src="img/id4_img1_9.png" /><a href="ranking.html" target="_blank">游泳</a><br/><span>587716</span></p><p><img src="img/id4_img1_10.png" /><a href="#">体育</a><br/><span>587716</span></p></li>
+					<li><p><img src="img/id4_img1_11.png" /><a href="ranking.html" target="_blank">科幻</a><br/><span>587716</span></p><p><img src="img/id4_img1_12.png" /><a href="#">灵异</a><br/><span>587716</span></p></li>
+					<li><p><img src="img/id4_img1_13.png" /><a href="ranking.html" target="_blank">女生网</a><br/><span>587716</span></p><p><img src="img/id4_img1_14.png" /><a href="#">二次元</a><br/><span>587716</span></p></li>
+				</ul>
+			</div>
+			
+			<div class="cla2">
+				
+				
+				
+				
+				<!--轮播图-->
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+    <!-- 图片容器 -->
+    <div class="carousel-inner" >
+        <div class="item active">
+            <img src="img/id4_img2_lun1.png" alt="..."/>
+            <div class="carousel-caption ">
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/id4_img2_lun2.png" alt="..."/>
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/id4_img2_lun3.png" alt="..."/>
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/id4_img2_lun4.png" alt="...">
+            <div class="carousel-caption">
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/id4_img2_lun5.png" alt="...">
+            <div class="carousel-caption">
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- 左右控制按钮 -->
+    <a class="left carousel-control" href="#myCarousel"  data-slide="prev">
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    </a>
+</div>
+				
+				
+				
+				
+				
+				
+				<div class="claa">
+				<img src="img/id4_img3_1.png" />
+				<img src="img/id4_img3_2.png" />
+				<img src="img/id4_img3_3.png" />
+				</div>
+				
+			</div>
+			
+			
+			<!--滚动条-->
+			<h4>&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/laba.png"/>热门推荐：</h4>
+			<div class="cla3" id="con">
+				
+	<div class="bottomcover" style="z-index:2;"></div>
+	<ul>
+		<li>
+			<div class="div_left"><a href="http://www.htmleaf.com/"><img src="img/id4_img4_gun1.png" title="Jarvis_风"></a></div>
+			<div class="div_right">
+				<a href="#">一刀劈开生死路</a>
+				<div class="twit_item_time">一刀劈开生死路，两脚踏出是非门！凡人掌握毁天灭地的超凡火器；武者修炼摧城灭国的秘传武道</div>
+			</div>
+		</li>
+		<li>
+			<div class="div_left"><a href="http://www.htmleaf.com/"><img src="img/id4_img4_gun2.png" title="Jarvis_风"></a></div>
+			<div class="div_right">
+				<a href="#">贼警</a>
+				<div class="twit_item_time">左罗临危受命成为七组组长，以水逆计划招募苏诚，精诚合作，取长补短，重建七组辉煌。</div>
+			</div>
+		</li>
+		<li>
+			<div class="div_left"><a href="http://www.htmleaf.com/"><img src="img/id4_img4_gun3.png" title="Jarvis_风"></a></div>
+			<div class="div_right">
+				<a href="#">怪兽工厂</a>
+				<div class="twit_item_time">怪兽语录：千万不要跟我们玩恶意竞争，机械制造只是我们的爱好，拳头和刀枪不入的身躯，才是我们混社会的本钱。</div>
+			</div>
+		</li>
+		<li>
+			<div class="div_left"><a href="http://www.htmleaf.com/"><img src="img/id4_img4_gun4.png" title="Jarvis_风"></a></div>
+			<div class="div_right">
+				<a href="#">武极宗师</a>
+				<div class="twit_item_time">得到神秘的属性异能，平凡庸碌的人生就此改变。横扫穿梭诸天，做最强武道宗师</div>
+			</div>
+		</li>
+		<li>
+			<div class="div_left"><a href="http://www.htmleaf.com/"><img src="img/id4_img4_gun5.png" title="Jarvis_风"></a></div>
+			<div class="div_right">
+				<a href="#">大文豪</a>
+				<div class="twit_item_time">寒门少年一枚，身份尴尬。且看这寒门少年如何一路逆袭，成就大文豪的精彩之路。</div>
+			</div>
+		</li>
+		<li>
+			<div class="div_left"><a href="http://www.htmleaf.com/"><img src="img/id4_img4_gun6.png" title="Jarvis_风"></a></div>
+			<div class="div_right">
+				<a href="#">帝国霸主</a>
+				<div class="twit_item_time">第三帝国的元首刚刚死去，主角鸠占鹊巢成了新的元首，身份成疑让他不得不谨小慎微。</div>
+			</div>
+		</li>
+		<li>
+			<div class="div_left"><a href="http://www.htmleaf.com/"><img src="img/id4_img4_gun7.png" title="Jarvis_风"></a></div>
+			<div class="div_right">
+				<a href="#">一念永恒</a>
+				<div class="twit_item_time">一念成沧海，一念化桑田。一念斩千魔，一念诛万仙。</div>
+			</div>
+		</li>
+	</ul>
+				
+				
+				
+			</div>
+			
+		</div>
+		
+		
+		
+		
+		
+		<!--id5-->
+		<div id="id5">
+			
+			<div class="cla1">
+				<h3>本周强推</h3>
+				<ul>
+					<li><div class="aa"><span>【都市】</span>&nbsp;&nbsp;<a href="book.html">娱乐怪才</a></div><p>祥光</p></li>
+					<li><div class="aa"><span>【都市】</span>&nbsp;&nbsp;<a href="book.html">环保大师</a></div><p>割鹿</p></li>
+					<li><div class="aa"><span>【二次元】</span>&nbsp;&nbsp;<a href="book.html">轮回乐园</a></div><p>那一只蚊子</p></li>
+					<li><div class="aa"><span>【玄幻】</span>&nbsp;&nbsp;<a href="book.html">超神宗师</a></div><p>一梦几千秋</p></li>
+					<li><div class="aa"><span>【军事】</span>&nbsp;&nbsp;<a href="book.html">全能退伍兵</a></div><p>巨火</p></li>
+					<li><div class="aa"><span>【历史】</span>&nbsp;&nbsp;<a href="book.html">我是九皇子</a></div><p>文翰小公子</p></li>
+					<li><div class="aa"><span>【玄幻】</span>&nbsp;&nbsp;<a href="book.html">超级神武道</a></div><p>会飞的鱼</p></li>
+					<li><div class="aa"><span>【游戏】</span>&nbsp;&nbsp;<a href="book.html">异界大老板</a></div><p>七言诗曰</p></li>
+					<li><div class="aa"><span>【奇幻】</span>&nbsp;&nbsp;<a href="book.html">莽穿新世界</a></div><p>楚白</p></li>
+					<li><div class="aa"><span>【都市】</span>&nbsp;&nbsp;<a href="book.html">重生无冕之王</a></div><p>格鱼</p></li>
+					<li><div class="aa"><span>【都市】</span>&nbsp;&nbsp;<a href="book.html">生物炼金手记</a></div><p>真费事</p></li>
+					<li><div class="aa"><span>【科幻】</span>&nbsp;&nbsp;<a href="book.html">时空干涉手册</a></div><p>关关雎鸠</p></li>
+					<li><div class="aa"><span>【奇幻】</span>&nbsp;&nbsp;<a href="book.html">吞噬世界之龙</a></div><p>风染丛林</p></li>
+					<li><div class="aa"><span>【仙侠】</span>&nbsp;&nbsp;<a href="book.html">西游之诸天万界</a></div><p>秋鸿来有信</p></li>
+					<li><div class="aa"><span>【二次元】</span>&nbsp;&nbsp;<a href="book.html">我是国宝</a></div><p>别致苏</p></li>
+					<li><div class="aa"><span>【科幻】</span>&nbsp;&nbsp;<a href="book.html">我的主神</a></div><p>月影画仙</p></li>
+					<li><div class="aa"><span>【武侠】</span>&nbsp;&nbsp;<a href="book.html">锦衣卫</a></div><p>插翅虎</p></li>
+					<li><div class="aa"><span>【页游】</span>&nbsp;&nbsp;<a href="book.html">传奇霸业</a></div><p>广告</p></li>
+					
+				</ul>
+			</div>
+			
+			
+			<div class="cla2">
+				<h3>编辑推荐</h3>
+				<div class="claa">
+					<img src="img/id5_img1.png" height="140px" style="margin-left: 100px;float: left;" />
+					<p>
+						<a href="book.html" target="_blank">《傲世九重天》</a><br />
+						&nbsp;&nbsp;<span>作者：风凌天下</span><br /><br />
+						一笑风雷震，一怒沧海寒；一手破苍穹，一剑舞长天！<br />
+						一人一剑，傲世九重天
+					</p>
+					<div id="xiangqing"><a href="#">书籍详情</a></div>
+				</div>
+				<div class="clab">
+					<div id="id5_zhong">
+						<h4 style="font-weight: 600;">相师分九品，一品一重天</h4>
+						<span>612,587</span>人在追<br />
+						一普通青年偶获诸葛亮生前的玄学传承，机缘巧合一步步走上相师之巅！
+					</div>
+					<div id="id5_zhong">
+						<h4 style="font-weight: 600;">穿越诸天位面，传播信仰</h4>
+						<span>50,122</span>人在追<br />
+						穿越诸天位面，吸收信仰，凝聚神格，成为诸天中那永恒的剑之君主！
+					</div>
+					<div id="id5_zhong">
+						<h4 style="font-weight: 600;">流落荒岛，忘记自己</h4>
+						<span>1,638</span>人在追<br />
+						原始雨林、极地冰原、高山雪域、死亡沙漠……
+					</div>
+					<div id="id5_zhong">
+						<h4 style="font-weight: 600;">重生西游龙子，穿越万界！</h4>
+						<span>60,463</span>人在追<br />
+						一觉醒来，重生西游北海龙王的私生子，得穿越诸天万界能力！
+					</div>
+					<div id="id5_zhong">
+						<h4 style="font-weight: 600;">重生平行时空的1995年</h4>
+						<span>203,455</span>人在追<br />
+						李谦重生在另一个时空的1995年，在这里，他当然比普通人更容易获得成功。
+					</div>
+					<div id="id5_zhong">
+						<h4 style="font-weight: 600;">父债子偿，族长奋斗路</h4>
+						<span>48,748</span>人在追<br />
+						穿二代桂重阳回到了木家村，开始了族长之路，有房，三间茅草屋。
+					</div>
+				</div>
+				<div class="clac">
+					<img src="img/id5_img2.png" /><img src="img/id5_img3.png" style="margin-left: 30px;" />
+				</div>
+			</div>
+			
+			
+			
+			<div class="cla3">
+				<h3>本周强推</h3>
+				<ul>
+					<li><div class="aa"><span>【都市】</span>&nbsp;&nbsp;<a href="#">娱乐怪才</a></div><p>祥光</p></li>
+					<li><div class="aa"><span>【都市】</span>&nbsp;&nbsp;<a href="#">环保大师</a></div><p>割鹿</p></li>
+					<li><div class="aa"><span>【二次元】</span>&nbsp;&nbsp;<a href="#">轮回乐园</a></div><p>那一只蚊子</p></li>
+					<li><div class="aa"><span>【玄幻】</span>&nbsp;&nbsp;<a href="#">超神宗师</a></div><p>一梦几千秋</p></li>
+					<li><div class="aa"><span>【军事】</span>&nbsp;&nbsp;<a href="#">全能退伍兵</a></div><p>巨火</p></li>
+					<li><div class="aa"><span>【历史】</span>&nbsp;&nbsp;<a href="#">我是九皇子</a></div><p>文翰小公子</p></li>
+					<li><div class="aa"><span>【玄幻】</span>&nbsp;&nbsp;<a href="#">超级神武道</a></div><p>会飞的鱼</p></li>
+					<li><div class="aa"><span>【游戏】</span>&nbsp;&nbsp;<a href="#">异界大老板</a></div><p>七言诗曰</p></li>
+					<li><div class="aa"><span>【奇幻】</span>&nbsp;&nbsp;<a href="#">莽穿新世界</a></div><p>楚白</p></li>
+					<li><div class="aa"><span>【都市】</span>&nbsp;&nbsp;<a href="#">重生无冕之王</a></div><p>格鱼</p></li>
+					<li><div class="aa"><span>【都市】</span>&nbsp;&nbsp;<a href="#">生物炼金手记</a></div><p>真费事</p></li>
+					<li><div class="aa"><span>【科幻】</span>&nbsp;&nbsp;<a href="#">时空干涉手册</a></div><p>关关雎鸠</p></li>
+					<li><div class="aa"><span>【奇幻】</span>&nbsp;&nbsp;<a href="#">吞噬世界之龙</a></div><p>风染丛林</p></li>
+					<li><div class="aa"><span>【仙侠】</span>&nbsp;&nbsp;<a href="#">西游之诸天万界</a></div><p>秋鸿来有信</p></li>
+					<li><div class="aa"><span>【二次元】</span>&nbsp;&nbsp;<a href="#">我是国宝</a></div><p>别致苏</p></li>
+					<li><div class="aa"><span>【科幻】</span>&nbsp;&nbsp;<a href="#">我的主神</a></div><p>月影画仙</p></li>
+					<li><div class="aa"><span>【武侠】</span>&nbsp;&nbsp;<a href="#">锦衣卫</a></div><p>插翅虎</p></li>
+					<li><div class="aa"><span>【页游】</span>&nbsp;&nbsp;<a href="#">传奇霸业</a></div><p>广告</p></li>
+					
+				</ul>
+			</div>
+			<img src="img/id5_img_end.png" width="100%" style="margin-top: 50px;" />
+			
+			
+			
+			
+		</div>
+		
+		<!--id6-->
+		<div id="id6">
+			
+			<div class="cla1" id="a1">
+				<h3>原创风云榜&nbsp;*&nbsp;新书</h3>
+				<ul>
+					<li id="frist">
+						<p>
+							<img src="img/id6_1.png"><br/>
+							<span>我是至尊</span><br />
+							<span>30088</span>月票<br />
+							玄幻&nbsp;*&nbsp;风凌天下
+						</p>
+						<img id="tu" src="img/id6_img2_shu1.png"  />
+					</li>
+					<li>
+						<p><img src="img/id6_2.png">&nbsp;&nbsp;<a href="#">我的姐姐是大明星</a></p>
+						<p>3645</p>
+					</li>
+					<li>
+						<p><img src="img/id6_3.png">&nbsp;&nbsp;<a href="#">超武穿越</a></p>
+						<p>3269</p>
+					</li>
+					<li>
+						<p><img src="img/id6_4.png">&nbsp;&nbsp;<a href="#">白银霸主</a></p>
+						<p>2628</p>
+					</li>
+					<li>
+						<p><img src="img/id6_5.png">&nbsp;&nbsp;<a href="#">大文豪</a></p>
+						<p>2258</p>
+					</li>
+					<li>
+						<p><img src="img/id6_6.png">&nbsp;&nbsp;<a href="#">族长压力大</a></p>
+						<p>2132</p>
+					</li>
+					<li>
+						<p><img src="img/id6_7.png">&nbsp;&nbsp;<a href="#">神豪无极限</a></p>
+						<p>1938</p>
+					</li>
+					<li>
+						<p><img src="img/id6_8.png">&nbsp;&nbsp;<a href="#">综艺之谐星传奇</a></p>
+						<p>1577</p>
+					</li>
+					<li>
+						<p><img src="img/id6_9.png">&nbsp;&nbsp;<a href="#">以神为铒</a></p>
+						<p>959</p>
+					</li>
+					<li>
+						<p><img src="img/id6_10.png">&nbsp;&nbsp;<a href="#">最强齐天大圣</a></p>
+						<p>956</p>
+					</li>
+				</ul>
+			</div>
+			<div class="cla2">
+				
+				<h3>24小时热搜榜</h3>
+				<ul>
+					<li id="frist">
+						<p>
+							<img src="img/id6_1.png"><br/>
+							<span>圣墟</span><br />
+							<span>销量冠军</span><br />
+							玄幻&nbsp;*&nbsp;辰东
+						</p>
+						<img id="tu" src="img/id6_img2_shu2.png"  />
+					</li>
+					<li>
+						<p><img src="img/id6_2.png">&nbsp;&nbsp;<a href="#">一念永恒</a></p>
+						<p>3645</p>
+					</li>
+					<li>
+						<p><img src="img/id6_3.png">&nbsp;&nbsp;<a href="#">废土崛起</a></p>
+						<p>3269</p>
+					</li>
+					<li>
+						<p><img src="img/id6_4.png">&nbsp;&nbsp;<a href="#">修真聊天群</a></p>
+						<p>2628</p>
+					</li>
+					<li>
+						<p><img src="img/id6_5.png">&nbsp;&nbsp;<a href="#">天道图书馆</a></p>
+						<p>2258</p>
+					</li>
+					<li>
+						<p><img src="img/id6_6.png">&nbsp;&nbsp;<a href="#">不朽凡人</a></p>
+						<p>2132</p>
+					</li>
+					<li>
+						<p><img src="img/id6_7.png">&nbsp;&nbsp;<a href="#">疯狂神豪玩科技</a></p>
+						<p>1938</p>
+					</li>
+					<li>
+						<p><img src="img/id6_8.png">&nbsp;&nbsp;<a href="#">神级幸运星</a></p>
+						<p>1577</p>
+					</li>
+					<li>
+						<p><img src="img/id6_9.png">&nbsp;&nbsp;<a href="#">我真是大明星</a></p>
+						<p>959</p>
+					</li>
+					<li>
+						<p><img src="img/id6_10.png">&nbsp;&nbsp;<a href="#">真武世界</a></p>
+						<p>956</p>
+					</li>
+				</ul>
+			</div>
+			<div class="cla3">
+				
+				<h3>周点击榜</h3>
+				<ul>
+					<li id="frist">
+						<p>
+							<img src="img/id6_1.png"><br/>
+							<span>金牌主持</span><br />
+							<span>249566</span>点击<br />
+							都市&nbsp;*&nbsp;奥比椰
+						</p>
+						<img id="tu" src="img/id6_img2_shu3.png"  />
+					</li>
+					<li>
+						<p><img src="img/id6_2.png">&nbsp;&nbsp;<a href="#">美国之大牧场主</a></p>
+						<p>3645</p>
+					</li>
+					<li>
+						<p><img src="img/id6_3.png">&nbsp;&nbsp;<a href="#">都市最强装逼系统</a></p>
+						<p>3269</p>
+					</li>
+					<li>
+						<p><img src="img/id6_4.png">&nbsp;&nbsp;<a href="#">万道剑尊</a></p>
+						<p>2628</p>
+					</li>
+					<li>
+						<p><img src="img/id6_5.png">&nbsp;&nbsp;<a href="#">崩坏纪元</a></p>
+						<p>2258</p>
+					</li>
+					<li>
+						<p><img src="img/id6_6.png">&nbsp;&nbsp;<a href="#">天影</a></p>
+						<p>2132</p>
+					</li>
+					<li>
+						<p><img src="img/id6_7.png">&nbsp;&nbsp;<a href="#">至尊战神</a></p>
+						<p>1938</p>
+					</li>
+					<li>
+						<p><img src="img/id6_8.png">&nbsp;&nbsp;<a href="#">从零开始的触手怪</a></p>
+						<p>1577</p>
+					</li>
+					<li>
+						<p><img src="img/id6_9.png">&nbsp;&nbsp;<a href="#">超凡传</a></p>
+						<p>959</p>
+					</li>
+					<li>
+						<p><img src="img/id6_10.png">&nbsp;&nbsp;<a href="#">狂探</a></p>
+						<p>956</p>
+					</li>
+				</ul>
+			</div>
+			<div class="cla4">
+				
+				<h3>周推荐票榜</h3>
+				<ul>
+					<li id="frist">
+						<p>
+							<img src="img/id6_1.png"><br/>
+							<span>斗战狂潮</span><br />
+							<span>118117</span>推荐票<br />
+							仙侠&nbsp;*&nbsp;骷髅精灵
+						</p>
+						<img id="tu" src="img/id6_img2_shu4.png"  />
+					</li>
+					<li>
+						<p><img src="img/id6_2.png">&nbsp;&nbsp;<a href="#">牧神记</a></p>
+						<p>113824</p>
+					</li>
+					<li>
+						<p><img src="img/id6_3.png">&nbsp;&nbsp;<a href="#">无疆</a></p>
+						<p>109529</p>
+					</li>
+					<li>
+						<p><img src="img/id6_4.png">&nbsp;&nbsp;<a href="#">天影</a></p>
+						<p>109115</p>
+					</li>
+					<li>
+						<p><img src="img/id6_5.png">&nbsp;&nbsp;<a href="#">圣墟</a></p>
+						<p>103894</p>
+					</li>
+					<li>
+						<p><img src="img/id6_6.png">&nbsp;&nbsp;<a href="#">万界天尊</a></p>
+						<p>96393</p>
+					</li>
+					<li>
+						<p><img src="img/id6_7.png">&nbsp;&nbsp;<a href="#">超凡传</a></p>
+						<p>94823</p>
+					</li>
+					<li>
+						<p><img src="img/id6_8.png">&nbsp;&nbsp;<a href="#">神门</a></p>
+						<p>92985</p>
+					</li>
+					<li>
+						<p><img src="img/id6_9.png">&nbsp;&nbsp;<a href="#">星球生死劫</a></p>
+						<p>91174</p>
+					</li>
+					<li>
+						<p><img src="img/id6_10.png">&nbsp;&nbsp;<a href="#">一念永恒</a></p>
+						<p>65907</p>
+					</li>
+				</ul>
+			</div>
+			<div class="cla5">
+				
+				<h3>签约作家新书榜</h3>
+				<ul>
+					<li id="frist">
+						<p>
+							<img src="img/id6_1.png"><br/>
+							<span>梦想为王</span><br />
+							<span>710389</span>潜力值<br />
+							都市&nbsp;*&nbsp;中秋明月
+						</p>
+						<img id="tu" src="img/id6_img2_shu5.png"  />
+					</li>
+					<li>
+						<p><img src="img/id6_2.png">&nbsp;&nbsp;<a href="#">汉乡</a></p>
+						<p>574958</p>
+					</li>
+					<li>
+						<p><img src="img/id6_3.png">&nbsp;&nbsp;<a href="#">女帝家的小白脸</a></p>
+						<p>291819</p>
+					</li>
+					<li>
+						<p><img src="img/id6_4.png">&nbsp;&nbsp;<a href="#">极品辅助系统</a></p>
+						<p>276223</p>
+					</li>
+					<li>
+						<p><img src="img/id6_5.png">&nbsp;&nbsp;<a href="#">东晋北府一丘八</a></p>
+						<p>264671</p>
+					</li>
+					<li>
+						<p><img src="img/id6_6.png">&nbsp;&nbsp;<a href="#">娱乐星工场</a></p>
+						<p>239011</p>
+					</li>
+					<li>
+						<p><img src="img/id6_7.png">&nbsp;&nbsp;<a href="#">天下豪商</a></p>
+						<p>230747</p>
+					</li>
+					<li>
+						<p><img src="img/id6_8.png">&nbsp;&nbsp;<a href="#">开始你的表演</a></p>
+						<p>188925</p>
+					</li>
+					<li>
+						<p><img src="img/id6_9.png">&nbsp;&nbsp;<a href="#">神级书虫</a></p>
+						<p>109404</p>
+					</li>
+					<li>
+						<p><img src="img/id6_10.png">&nbsp;&nbsp;<a href="#">我的身体有bug</a></p>
+						<p>63072</p>
+					</li>
+				</ul>
+			</div>
+			<p id="zhan"><a href="#">展开更多</a></p>
+			
+			
+			<img src="img/id6_end.png" width="100%" style="margin-top: 70px;" />
+			
+		</div>
+		
+		
+		
+		
+		<!--id7-->
+		<div id="id7">
+			<h3>完本精品</h3>
+			<div class="cla1" id="a1">
+				<img src="img/id7_img_shu1.png" style="float: left;" />
+				<div class="claa" style="float:left;height:100px;width:260px;margin-left: 15px;">
+					<p style="height: 20px;float: left; font-weight: 700; font-size: 16px;">全宇宙都是我好友：我只想抢红包</p>
+					<br /><br/>江道离捞瓶子，加好友，将仙界，西方诸神，异界天魔，都拉到一个群里，会是神马结果？
+					<br /><br />
+					<img src="img/id7_img_yong.png" />何处不染尘
+					<div style="width: 58px;border:1px solid red;box-sizing:border-box;color:red;height: 22px;padding:2px;float:right;background-color: blanchedalmond;">168万字</div>
+					<div style="width: 58px;height: 22px;box-sizing:border-box;border:1px solid rgb(200,200,200);margin-right:10px;padding:2px;float:right;background-color: white;">异术超能</div>
+				</div>
+				
+			</div>
+			<div class="cla1" id="a1">
+				<img src="img/id7_img_shu2.png" style="float: left;" />
+				<div class="claa" style="float:left;height:100px;width:260px;margin-left: 15px;">
+					<p style="height: 20px;float: left; font-weight: 700; font-size: 16px;">无悔九二：重新开始无悔人生</p>
+					<br /><br/>92年，这是中国发展史上的一道分水岭，也是吴小正人生的一道分水岭...
+					<br /><br />
+					<img src="img/id7_img_yong.png" />莫老黑
+					<div style="width: 58px;border:1px solid red;box-sizing:border-box;color:red;height: 22px;padding:2px;float:right;background-color: blanchedalmond;">168万字</div>
+					<div style="width: 58px;height: 22px;box-sizing:border-box;border:1px solid rgb(200,200,200);margin-right:10px;padding:2px;float:right;background-color: white;">异术超能</div>
+				</div>
+				</div>
+			<div class="cla1" id="a1">
+				<img src="img/id7_img_shu3.png" style="float: left;" />
+				<div class="claa" style="float:left;height:100px;width:260px;margin-left: 15px;">
+					<p style="height: 20px;float: left; font-weight: 700; font-size: 16px;">凶残动物在哪里：进化凶残异兽</p>
+					<br /><br/>实验生物遭受时空力量洗礼，进化变异为凶残的灵兽。
+					<br /><br />
+					<img src="img/id7_img_yong.png" />奥咿呀
+					<div style="width: 58px;border:1px solid red;box-sizing:border-box;color:red;height: 22px;padding:2px;float:right;background-color: blanchedalmond;">168万字</div>
+					<div style="width: 58px;height: 22px;box-sizing:border-box;border:1px solid rgb(200,200,200);margin-right:10px;padding:2px;float:right;background-color: white;">异术超能</div>
+				</div>
+				</div>
+			<div class="cla1">
+				<img src="img/id7_img_shu4.png" style="float: left;" />
+				<div class="claa" style="float:left;height:100px;width:260px;margin-left: 15px;">
+					<p style="height: 20px;float: left; font-weight: 700; font-size: 16px;">活在诸天：国术凶猛，穿越诸天</p>
+					<br /><br/>诡异的小树，奇异的世界，无尽的危险，生存还是毁灭，到底该何去何从……
+					<br /><br />
+					<img src="img/id7_img_yong.png" />你好再见见
+					<div style="width: 58px;border:1px solid red;box-sizing:border-box;color:red;height: 22px;padding:2px;float:right;background-color: blanchedalmond;">168万字</div>
+					<div style="width: 58px;height: 22px;box-sizing:border-box;border:1px solid rgb(200,200,200);margin-right:10px;padding:2px;float:right;background-color: white;">异术超能</div>
+				</div>
+				</div>
+			<div class="cla1">
+				<img src="img/id7_img_shu5.png" style="float: left;" />
+				<div class="claa" style="float:left;height:100px;width:260px;margin-left: 15px;">
+					<p style="height: 20px;float: left; font-weight: 700; font-size: 16px;">山海八荒录：祝由禁咒，斩仙飞刀</p>
+					<br /><br/>少年继承祝由禁咒，得斩仙飞刀，入大晋世家，搅动八荒风云！
+					<br /><br />
+					<img src="img/id7_img_yong.png" />洛水
+					<div style="width: 58px;border:1px solid red;box-sizing:border-box;color:red;height: 22px;padding:2px;float:right;background-color: blanchedalmond;">168万字</div>
+					<div style="width: 58px;height: 22px;box-sizing:border-box;border:1px solid rgb(200,200,200);margin-right:10px;padding:2px;float:right;background-color: white;">异术超能</div>
+				</div>
+				</div>
+			<div class="cla1">
+				<img src="img/id7_img_shu6.png" style="float: left;" />
+				<div class="claa" style="float:left;height:100px;width:260px;margin-left: 15px;">
+					<p style="height: 20px;float: left; font-weight: 700; font-size: 16px;">穿越影视崛起之路：无限！</p>
+					<br /><br/>临死之际，获得穿越影视的能力。
+					<br /><br />
+					<img src="img/id7_img_yong.png" />狐狸小仙
+					<div style="width: 58px;border:1px solid red;box-sizing:border-box;color:red;height: 22px;padding:2px;float:right;background-color: blanchedalmond;">168万字</div>
+					<div style="width: 58px;height: 22px;box-sizing:border-box;border:1px solid rgb(200,200,200);margin-right:10px;padding:2px;float:right;background-color: white;">异术超能</div>
+				</div>
+				</div>
+			<div class="cla1">
+				<img src="img/id7_img_shu7.png" style="float: left;" />
+				<div class="claa" style="float:left;height:100px;width:260px;margin-left: 15px;">
+					<p style="height: 20px;float: left; font-weight: 700; font-size: 16px;">大明新地主：享受生活，自己拼搏</p>
+					<br /><br/>沈越穿越了，还是穿越到了大明末期的海商家庭，他觉得，腐朽堕落的封建生活在向他招手。
+					<br /><br />
+					<img src="img/id7_img_yong.png" />葫芦娃
+					<div style="width: 58px;border:1px solid red;box-sizing:border-box;color:red;height: 22px;padding:2px;float:right;background-color: blanchedalmond;">168万字</div>
+					<div style="width: 58px;height: 22px;box-sizing:border-box;border:1px solid rgb(200,200,200);margin-right:10px;padding:2px;float:right;background-color: white;">异术超能</div>
+				</div>
+				</div>
+			<div class="cla1">
+				<img src="img/id7_img_shu8.png" style="float: left;" />
+				<div class="claa" style="float:left;height:100px;width:260px;margin-left: 15px;">
+					<p style="height: 20px;float: left; font-weight: 700; font-size: 16px;">史上第一祖师爷：林锋开始奋斗</p>
+					<br /><br/>系统主线任务：林锋开山立派，建立史上第一大宗门，林锋本人成为第一祖师。
+					<br /><br />
+					<img src="img/id7_img_yong.png" />八月飞鹰
+					<div style="width: 58px;border:1px solid red;box-sizing:border-box;color:red;height: 22px;padding:2px;float:right;background-color: blanchedalmond;">168万字</div>
+					<div style="width: 58px;height: 22px;box-sizing:border-box;border:1px solid rgb(200,200,200);margin-right:10px;padding:2px;float:right;background-color: white;">异术超能</div>
+				</div>
+				</div>
+			<div class="cla1">
+				<img src="img/id7_img_shu9.png" style="float: left;" />
+				<div class="claa" style="float:left;height:100px;width:260px;margin-left: 15px;">
+					<p style="height: 20px;float: left; font-weight: 700; font-size: 16px;">掠天记：修真界绝世败类！</p>
+					<br /><br/>南瞻部州最大的败类，修真界的超级匪盗！坑蒙拐骗，无恶不作
+					<br /><br />
+					<img src="img/id7_img_yong.png" />黑山老鬼
+					<div style="width: 58px;border:1px solid red;box-sizing:border-box;color:red;height: 22px;padding:2px;float:right;background-color: blanchedalmond;">168万字</div>
+					<div style="width: 58px;height: 22px;box-sizing:border-box;border:1px solid rgb(200,200,200);margin-right:10px;padding:2px;float:right;background-color: white;">异术超能</div>
+				</div>
+				</div>
+		</div>
+		
+		
+		
+		<!--id8-->
+		<div id="id8">
+			<ul>
+				<li><img src="img/id8_img1.png" id="aa"></li>
+				<li><img src="img/id8_img2.png"></li>
+				<li><img src="img/id8_img3.png"></li>
+				<li><img src="img/id8_img4.png"></li>
+				<li><img src="img/id8_img5.png"></li>
+				<li><img src="img/id8_img6.png"></li>
+				<li><img src="img/id8_img7.png"></li>
+			</ul>
+		</div>
+		
+		
+		
+		
+		<!--daohang-->
+		<div id="daohang"><img src="img/er.png"style="display:block;height: 200px;width: 190px;float: right;">
+			
+			<h4>扫描二维码,走进我们</h4>
+		</div>
+		
+		
+		
+		
+		
+		
+		<!--id9-->
+		<div id="id9">
+			阅文集团旗下网站: <a href="index1.html">起点中文网</a> &nbsp;&nbsp;<a href="#">起点女生网</a> &nbsp;&nbsp; <a href="#">创世中文网</a>
+			&nbsp;&nbsp;<a href="#">云起书院</a>  &nbsp;&nbsp; <a href="#">红袖添香</a> &nbsp;&nbsp;  <a href="#">小说阅读网</a>   <a href="#">言情小说吧</a>
+			&nbsp;&nbsp;<a href="#">潇湘书院</a> &nbsp;&nbsp;  <a href="#">天外听书网</a>  &nbsp;&nbsp; <a href="#">懒人听书</a>   <a href="#">阅文悦读</a>
+			&nbsp;&nbsp;  <a href="#">qq阅读</a> &nbsp;&nbsp;  <a href="#">起点读书</a> &nbsp;&nbsp;  <a href="#">作家助手</a>   <a href="#">起点国际网</a>   
+			<br />
+			<a href="#">关于起点</a> &nbsp;&nbsp;<a href="#">联系我们</a> &nbsp;&nbsp;<a href="#">加入我们</a> &nbsp;&nbsp;
+			<a href="#">帮助中心</a> &nbsp;&nbsp;<a href="#">提交建议</a> &nbsp;&nbsp;<a href="#">起点论坛</a> &nbsp;&nbsp;
+			<a href="#">动漫频道</a> &nbsp;&nbsp;<br />
+			Copyright © 2002-2017 www.qidian.com All Rights Reserved版权所有 上海玄霆娱乐信息科技有限公司<br />
+			上海玄霆娱乐信息科技有限公司 增值电信业务经营许可证沪B2-20080046 沪网文[2015]0081-031 新出网证（沪）字010 沪ICP备08017520号-1<br />
+			请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！举报电话：010-59357051<br />
+			本站所收录的作品、社区话题、用户评论、用户上传内容或图片等均属用户个人行为。如前述内容侵害您的权益，欢迎举报投诉，一经核实，立即删除，本站不承担任何责任<br />
+			联系方式 总机 021-61870500 地址：中国（上海）自由贸易试验区碧波路690号6号楼101、201室
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
